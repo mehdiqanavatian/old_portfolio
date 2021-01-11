@@ -1,0 +1,371 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 90vh;
+  background-image: url(BG.JPG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-perspective: 20px;
+          perspective: 20px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-color: #c4dfca4d;
+  border: solid 1px #ffffff;
+  border-radius: 1rem;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.card .card-front,
+.card .card-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  padding: 0rem 3rem 3rem 3rem;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card .card-back {
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  cursor: pointer;
+  padding: 3rem;
+}
+
+.card .card-back .card-back-logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-image: url(LOGOS/MQTRFO.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.card .card-back .watermark {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(LOGOS/MQTR.svg), url(LOGOS/Lines.svg);
+  background-repeat: no-repeat, repeat-x;
+  background-position: top right;
+  z-index: -2;
+  opacity: 0.1;
+}
+
+.card .card-back .business-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card .card-back .business-card .business-card-bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+.card .card-back .business-card .business-card-bio .business-card-bio-avatar {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 8rem;
+  height: 8rem;
+  margin-right: 2rem;
+  border: solid 1px #ffffff;
+  -webkit-box-shadow: 0 0 5px 5px #00000027;
+          box-shadow: 0 0 5px 5px #00000027;
+  background-image: url(ICON.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: #c4dfca4d;
+}
+
+.card .card-back .business-card .business-card-bio .business-card-bio-info {
+  text-shadow: #00000057 1px 1px 3px;
+}
+
+.card .card-back .business-card .business-card-bio .business-card-bio-info h1 {
+  margin-bottom: 0rem;
+}
+
+.card .card-back .business-card .business-card-bio .business-card-bio-info h1 + p {
+  margin-bottom: 15px;
+  margin-left: 2px;
+}
+
+.card .card-back .business-card .business-card-bio .business-card-bio-info p {
+  margin: 4px;
+}
+
+.card .card-back .business-card .business-card-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+}
+
+.card .card-back .business-card .business-card-social a {
+  border: solid 1px #ffffff;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2rem;
+  background-color: #c4dfca4d;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0 0 5px 5px #00000027;
+          box-shadow: 0 0 5px 5px #00000027;
+}
+
+.card .card-back .business-card .business-card-social .instagram {
+  background-image: url(Social/Instagram.svg);
+}
+
+.card .card-back .business-card .business-card-social .whatsapp {
+  background-image: url(Social/Whatsapp.svg);
+}
+
+.card .card-back .business-card .business-card-social .telegram {
+  background-image: url(Social/Telegram.svg);
+}
+
+.card .card-back .business-card .business-card-social .email {
+  background-image: url(Social/Mail.svg);
+}
+
+.card .card-back .business-card .business-card-social .phone {
+  background-image: url(Social/Phone.svg);
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.navbar .logo {
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border: solid 1px #ffffff;
+  border-radius: 50%;
+  background-image: url(LOGOS/MQ.svg);
+  background-color: #c4dfcaf1;
+  cursor: pointer;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.navbar .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 15rem;
+  height: 3rem;
+  border: solid 1px #ffffff;
+  border-top: 0;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-box-shadow: #00000079 0px -2px 7px inset;
+          box-shadow: #00000079 0px -2px 7px inset;
+  background-color: #c4dfca1f;
+  padding: 1rem;
+  -webkit-backdrop-filter: brightness(1%);
+          backdrop-filter: brightness(1%);
+}
+
+.navbar .menu a {
+  text-decoration: none;
+  text-shadow: black 0px 0px 3px;
+  color: #0aff99;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  position: relative;
+}
+
+.navbar .menu a:hover,
+.navbar .menu a .active, .navbar .menu a:focus {
+  color: orange;
+}
+
+.navbar .menu a:hover:before,
+.navbar .menu a .active:before, .navbar .menu a:focus:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -1rem;
+  border: solid 1px currentColor;
+  -webkit-box-shadow: #00000079 0px 0px 2px 0px, currentColor 0px 10px 15px 5px;
+          box-shadow: #00000079 0px 0px 2px 0px, currentColor 0px 10px 15px 5px;
+}
+
+.navbar .menu a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -1rem;
+  border: solid 1px transparent;
+  -webkit-transition: border 0.5s, -webkit-box-shadow 0.8s;
+  transition: border 0.5s, -webkit-box-shadow 0.8s;
+  transition: box-shadow 0.8s, border 0.5s;
+  transition: box-shadow 0.8s, border 0.5s, -webkit-box-shadow 0.8s;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  border: solid 1px #ffffff;
+  border-radius: 1rem;
+  -webkit-box-shadow: #00000079 0px 0px 7px 7px inset;
+          box-shadow: #00000079 0px 0px 7px 7px inset;
+}
+/*# sourceMappingURL=style.css.map */
