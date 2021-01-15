@@ -1,6 +1,6 @@
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
@@ -359,13 +359,91 @@ body {
 }
 
 .content {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   border: solid 1px #ffffff;
   border-radius: 1rem;
   -webkit-box-shadow: #00000079 0px 0px 7px 7px inset;
           box-shadow: #00000079 0px 0px 7px 7px inset;
+  text-shadow: 2px 2px 2px #00000079;
+  color: white;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: both mandatory;
+      scroll-snap-type: both mandatory;
+}
+
+.content .activeContent {
+  background-color: red;
+}
+
+.content .about,
+.content .skills,
+.content .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  padding: 1rem;
+  margin-right: 1rem;
+  scroll-snap-align: end;
+  border-radius: 1rem;
+  background-color: #00000020;
+}
+
+.content .skills .skills-all,
+.content .skills .skills-frontend,
+.content .skills .skills-backend,
+.content .skills .skills-web {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.content .skills .skills-all .skills-info,
+.content .skills .skills-frontend .skills-info,
+.content .skills .skills-backend .skills-info,
+.content .skills .skills-web .skills-info {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 50%;
+}
+
+.content .skills .skills-all .skills-chart,
+.content .skills .skills-frontend .skills-chart,
+.content .skills .skills-backend .skills-chart,
+.content .skills .skills-web .skills-chart {
+  width: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.content .skills .skills-all .skills-chart .canvas,
+.content .skills .skills-frontend .skills-chart .canvas,
+.content .skills .skills-backend .skills-chart .canvas,
+.content .skills .skills-web .skills-chart .canvas {
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

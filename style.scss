@@ -3,8 +3,6 @@ $logoBackground: #c4dfcaf1;
 $borderWhite: solid 1px #ffffff;
 
 html {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 *,
@@ -85,62 +83,62 @@ body {
 		color: white;
 		transform: rotateY(180deg);
 		cursor: pointer;
-        padding: 3rem;
-        
-        .card-back-logo{
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
-            width: 50%;
-            background-image: url(LOGOS/MQTRFO.svg);
-            background-repeat: no-repeat;
-            background-position: top right;
-            z-index: -1;
-            opacity: 0.2;
-        }
+		padding: 3rem;
 
-        .watermark{
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            background-image: url(LOGOS/MQTR.svg), url(LOGOS/Lines.svg);
-            background-repeat: no-repeat, repeat-x;
-            background-position: top right;
-            z-index: -2;
-            opacity: 0.1;
-        }
+		.card-back-logo {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 50%;
+			background-image: url(LOGOS/MQTRFO.svg);
+			background-repeat: no-repeat;
+			background-position: top right;
+			z-index: -1;
+			opacity: 0.2;
+		}
+
+		.watermark {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background-image: url(LOGOS/MQTR.svg), url(LOGOS/Lines.svg);
+			background-repeat: no-repeat, repeat-x;
+			background-position: top right;
+			z-index: -2;
+			opacity: 0.1;
+		}
 
 		.business-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			width: 100%;
-            height: 100%;
+			height: 100%;
 
 			.business-card-bio {
 				display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                width: 100%;
-                flex-grow: 3;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+				width: 100%;
+				flex-grow: 3;
 
-                .business-card-bio-avatar {
-                    flex-shrink: 0;
-                    width: 8rem;
-                    height: 8rem;
-                    margin-right: 2rem;
-                    border: $borderWhite;
-                    box-shadow: 0 0 5px 5px #00000027;
+				.business-card-bio-avatar {
+					flex-shrink: 0;
+					width: 8rem;
+					height: 8rem;
+					margin-right: 2rem;
+					border: $borderWhite;
+					box-shadow: 0 0 5px 5px #00000027;
 
-                    background-image: url(ICON.jpg);
-                    background-position: center;
-                    background-size: cover;
-                    background-color: #c4dfca4d;
-                }
+					background-image: url(ICON.jpg);
+					background-position: center;
+					background-size: cover;
+					background-color: #c4dfca4d;
+				}
 				.business-card-bio-info {
 					text-shadow: #00000057 1px 1px 3px;
 					h1 {
@@ -154,45 +152,45 @@ body {
 					p {
 						margin: 4px;
 					}
-				}	
-            }
-            .business-card-social {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-                flex-grow: 1;
-                width: 100%;
-                a {
-                    border: $borderWhite;
-                    border-radius: 50%;
-                    width: 5rem;
-                    height: 5rem;
-                    margin-right: 2rem;
-                    background-color: #c4dfca4d;
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    box-shadow: 0 0 5px 5px #00000027;
-                }
-                
-                .instagram{
-                    background-image: url(Social/Instagram.svg);
-                }
-                .whatsapp{
-                    background-image: url(Social/Whatsapp.svg);
-                }
-                .telegram{
-                    background-image: url(Social/Telegram.svg);
-                }
-                .email{
-                    background-image: url(Social/Mail.svg);
-                }
-                .phone{
-                    background-image: url(Social/Phone.svg);
-                }
-            }
+				}
+			}
+			.business-card-social {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				flex-grow: 1;
+				width: 100%;
+				a {
+					border: $borderWhite;
+					border-radius: 50%;
+					width: 5rem;
+					height: 5rem;
+					margin-right: 2rem;
+					background-color: #c4dfca4d;
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					box-shadow: 0 0 5px 5px #00000027;
+				}
+
+				.instagram {
+					background-image: url(Social/Instagram.svg);
+				}
+				.whatsapp {
+					background-image: url(Social/Whatsapp.svg);
+				}
+				.telegram {
+					background-image: url(Social/Telegram.svg);
+				}
+				.email {
+					background-image: url(Social/Mail.svg);
+				}
+				.phone {
+					background-image: url(Social/Phone.svg);
+				}
+			}
 		}
 	}
 }
@@ -263,9 +261,62 @@ body {
 }
 
 .content {
-	flex-grow: 1;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 	width: 100%;
 	border: $borderWhite;
 	border-radius: 1rem;
 	box-shadow: #00000079 0px 0px 7px 7px inset;
+	text-shadow: 2px 2px 2px #00000079;
+	color: white;
+	overflow: hidden;
+	scroll-behavior: smooth;
+	scroll-snap-type: both mandatory;
+	.activeContent {
+		background-color: red;
+	}
+	.about,
+	.skills,
+	.gallery {
+		display: flex;
+		flex-direction: column;
+		flex-shrink: 0;
+		width: 100%;
+		padding: 1rem;
+		margin-right: 1rem;
+		scroll-snap-align: end;
+		border-radius: 1rem;
+		background-color: #00000020;
+	}
+
+	.about {
+	}
+	.gallery {
+	}
+
+	.skills {
+		.skills-all,
+		.skills-frontend,
+		.skills-backend,
+		.skills-web {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			.skills-info {
+				flex-shrink: 0;
+				width: 50%;
+			}
+
+			.skills-chart {
+				width: 50%;
+				flex-shrink: 0;
+				.canvas {
+					height: 100%;
+				}
+			}
+		}
+	}
 }
