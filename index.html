@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="LOGOS/MQ-FAVICON.svg">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,15 +17,43 @@
                 <div class="navbar">
                     <div class="logo"></div>
                     <div class="menu">
-                        <a href="#">About</a>
-                        <a href="#">Skills</a>
-                        <a href="#">Gallery</a>
-                        <a href="#">Contacts</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#" id="contacts">Contacts</a>
                     </div>
                 </div>
 
                 <div class="content">
+                    <div id="about" class="about">
+                        <h1>Mehdi Qanavatian</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non possimus qui accusamus minima voluptatem minus ducimus et dolore. Eum tenetur voluptate pariatur excepturi, nostrum magni amet sit voluptates sapiente?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non possimus qui accusamus minima voluptatem minus ducimus et dolore. Eum tenetur voluptate pariatur excepturi, nostrum magni amet sit voluptates sapiente?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non possimus qui accusamus minima voluptatem minus ducimus et dolore. Eum tenetur voluptate pariatur excepturi, nostrum magni amet sit voluptates sapiente?</p>
+                    </div>
+                    <div id="skills" class="skills">
+                        <div class="skills-all">
 
+                        </div>
+                        <div class="skills-frontend">
+                            <div class="skills-info">
+                                <h1>Front End</h1>
+                                <p>This is what i actually enjoy wrestling with. I like designing all types of visual elements from sketching to UI. I like to spend my times doing this stuff as much as possible and this is where i like to experiment and have fun with.</p>
+                            </div>
+                            <div class="skills-chart">
+                                <canvas class="canvas"></canvas>
+                            </div>
+                        </div>
+                        <div class="skills-backend">
+                            <div class="skills-info"></div>
+                            <div class="skills-chart"></div>
+                        </div>
+                        <div class="skills-web">
+                            <div class="skills-info"></div>
+                            <div class="skills-chart"></div>
+                        </div>
+                    </div>
+                    <div id="gallery" class="gallery"></div>
                 </div>
             </div>
             <div class="card-back">
@@ -59,6 +87,6 @@
     </div>
 </body>
 <script src="main.js"></script>
-<!-- <script src="skillchart.js"></script> -->
+<script src="skillchart.js"></script>
 
 </html>

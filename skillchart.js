@@ -1,8 +1,5 @@
-const myChart = document.getElementById("myChart");
+const myChart = document.querySelector(".skills-frontend .skills-chart .canvas");
 const ctx = myChart.getContext('2d');
-
-myChart.style.width = "300px";
-myChart.style.height = "300px";
 
 const gradient = ctx.createLinearGradient(0, 0, 400, 400);
 
@@ -11,6 +8,7 @@ gradient.addColorStop(1, '#ffff00df');
 
 
 
+Chart.defaults.global.defaultFontColor = "#ffffffff";
 Chart.defaults.global.defaultFontColor = "#ffffffff";
 Chart.defaults.global.responsive = true;
 
@@ -35,7 +33,7 @@ let radarChart = new Chart(myChart,{
     },
     options:{
         legend:{
-            display: false
+            display: false,
             },
         scale:{
             gridLines:{
@@ -52,7 +50,9 @@ let radarChart = new Chart(myChart,{
                 backdropColor: "rgba(0, 0, 0, 0)",
                 suggestedMin: 40,
                 suggestedMax: 100
-                    
+            },
+            label:{
+                fontColor:"#ff0000"
             }
         }
     }

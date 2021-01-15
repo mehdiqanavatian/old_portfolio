@@ -48,21 +48,30 @@ menu.addEventListener('click', function (e) {
             menu.children[index].classList.remove('active');
         }
     }
+
+    function hideAllContent() {
+        let content = document.querySelector('.content');
+
+        for (let index = 0; index < content.children.length; index++) {
+            content.children[index].classList.remove('activeContent');
+        }
+    }
     toggleMenu();
+    hideAllContent();
     e.target.classList.add('active');
 });
 
 
-function flipCard(){
+function flipCard() {
     let card = document.querySelector('.card');
-    let navbar = document.querySelector('.navbar');
+    let front = document.querySelector('.card-front');
     flip = !flip;
 
     if (!flip && card.classList.contains('flip')) {
-        navbar.style.visibility = "visible";
+        front.style.visibility = "visible";
         card.classList.remove('flip');
     } else {
-        navbar.style.visibility = "hidden";
+        front.style.visibility = "hidden";
         card.classList.add('flip');
     }
 }
@@ -70,3 +79,4 @@ function flipCard(){
 
 document.querySelector('.logo').addEventListener('click', flipCard);
 document.querySelector('.card-back').addEventListener('click', flipCard);
+document.querySelector('#contacts').addEventListener('click', flipCard);
