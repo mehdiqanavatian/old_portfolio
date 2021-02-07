@@ -80,3 +80,36 @@ function flipCard() {
 document.querySelector('.logo').addEventListener('click', flipCard);
 document.querySelector('.card-back').addEventListener('click', flipCard);
 document.querySelector('#contacts').addEventListener('click', flipCard);
+document.querySelector('.expand').addEventListener('click', function (e) {
+
+    let card = document.querySelector('.card');
+    let logo = document.querySelector('.logo');
+    if (!main.classList.contains('maxWH')) {
+        main.classList.add('maxWH');
+        card.classList.add('maxWH');
+        logo.classList.add('logoMax');
+        document.body.classList.add('noPerspective')
+    } else {
+        main.classList.remove('maxWH');
+        card.classList.remove('maxWH');
+        logo.classList.remove('logoMax');
+        document.body.classList.remove('noPerspective')
+    }
+
+})
+
+document.querySelector('.skills-nav').addEventListener('click', function (e) {
+    let navanchor = e.target;
+    let strhref = navanchor.getAttribute('href');
+    let skill = document.querySelector(strhref);
+    let skills = document.querySelector('#skills');
+
+    for (const child of skills.children) {
+        if (child.classList.contains('first-order')) {
+            child.classList.remove('first-order');
+        }
+    }
+
+    skill.classList.add('first-order');
+    // let ttag = document.querySelector();
+});

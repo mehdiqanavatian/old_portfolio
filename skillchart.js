@@ -17,7 +17,7 @@ Chart.defaults.global.responsive = true;
 let radarChart = new Chart(myChart,{
     type:"radar",
     data:{
-    labels:["JAVASCRIPT","CSS","SQL","JAVA","HTML"],
+    labels:["JAVASCRIPT","CSS","JS Frameworks","JS Libraries","HTML"],
     datasets:[{
         label:"Mehdi",
         fill:true,
@@ -28,7 +28,7 @@ let radarChart = new Chart(myChart,{
         pointBackgroundColor:"#ffaa00",
         pointBorderWidth:1,
         pointHoverRadius:6,
-        data:[90,85,90,70,80]
+        data:[90,85,20,70,80]
     }],
     },
     options:{

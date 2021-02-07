@@ -7,13 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="LOGOS/MQ-FAVICON.svg">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="main">
         <div class="card">
             <div class="card-front">
+                <div class="expand"></div>
                 <div class="navbar">
                     <div class="logo"></div>
                     <div class="menu">
@@ -27,33 +30,69 @@
                 <div class="content">
                     <div id="about" class="about">
                         <h1>Mehdi Qanavatian</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non possimus qui accusamus minima voluptatem minus ducimus et dolore. Eum tenetur voluptate pariatur excepturi, nostrum magni amet sit voluptates sapiente?</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non possimus qui accusamus minima voluptatem minus ducimus et dolore. Eum tenetur voluptate pariatur excepturi, nostrum magni amet sit voluptates sapiente?</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non possimus qui accusamus minima voluptatem minus ducimus et dolore. Eum tenetur voluptate pariatur excepturi, nostrum magni amet sit voluptates sapiente?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non possimus qui accusamus
+                            minima voluptatem minus ducimus et dolore. Eum tenetur voluptate pariatur excepturi, nostrum
+                            magni amet sit voluptates sapiente?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non possimus qui accusamus
+                            minima voluptatem minus ducimus et dolore. Eum tenetur voluptate pariatur excepturi, nostrum
+                            magni amet sit voluptates sapiente?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non possimus qui accusamus
+                            minima voluptatem minus ducimus et dolore. Eum tenetur voluptate pariatur excepturi, nostrum
+                            magni amet sit voluptates sapiente?</p>
                     </div>
                     <div id="skills" class="skills">
-                        <div class="skills-all">
-
+                        <div class="skills-nav">
+                            <a href="#skills-all">All Skills</a>
+                            <a href="#skills-frontend">Front-End</a>
+                            <a href="#skills-backend">Back-End</a>
+                            <a href="#skills-web">Web Developement</a>
                         </div>
-                        <div class="skills-frontend">
+                        <div class="skills-all first-order" id="skills-all">
+                            <!-- Languages -->
+                            <div class="skill-capsule">C#</div>
+                            <div class="skill-capsule">Java</div>
+                            <div class="skill-capsule">Javascript</div>
+                            <div class="skill-capsule">Python</div>
+                            <!-- Frontend -->
+                            <div class="skill-capsule">HTML</div>
+                            <div class="skill-capsule">CSS</div>
+                            <div class="skill-capsule">SCSS</div>
+                            <!-- Databases -->
+                            <div class="skill-capsule">SQL</div>
+                            <div class="skill-capsule">mySql</div>
+                            <div class="skill-capsule">Sqlite</div>
+                            <!-- Extra Skills -->
+                        </div>
+                        <div class="skills-frontend" id="skills-frontend">
                             <div class="skills-info">
                                 <h1>Front End</h1>
-                                <p>This is what i actually enjoy wrestling with. I like designing all types of visual elements from sketching to UI. I like to spend my times doing this stuff as much as possible and this is where i like to experiment and have fun with.</p>
+                                <p>This is what i actually enjoy wrestling with. I like designing all types of visual
+                                    elements from sketching to UI. I like to spend my times doing this stuff as much as
+                                    possible and this is where i like to experiment and have fun with.</p>
                             </div>
                             <div class="skills-chart">
                                 <canvas class="canvas"></canvas>
                             </div>
                         </div>
-                        <div class="skills-backend">
+                        <div class="skills-backend" id="skills-backend">
                             <div class="skills-info"></div>
                             <div class="skills-chart"></div>
                         </div>
-                        <div class="skills-web">
+                        <div class="skills-web" id="skills-web">
                             <div class="skills-info"></div>
                             <div class="skills-chart"></div>
                         </div>
                     </div>
-                    <div id="gallery" class="gallery"></div>
+                    <div id="gallery" class="gallery">
+                        <div class="gallery-col">
+                        </div>
+                        <div class="gallery-col">
+                        </div>
+                        <div class="gallery-col">
+                        </div>
+                        <div class="gallery-col">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card-back">
