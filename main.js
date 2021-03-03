@@ -79,7 +79,8 @@ function flipCard() {
 
 document.querySelector('.logo').addEventListener('click', flipCard);
 document.querySelector('.card-back').addEventListener('click', flipCard);
-document.querySelector('#contacts').addEventListener('click', flipCard);
+document.querySelector('#contact').addEventListener('click', flipCard);
+document.querySelector('#inlineContact').addEventListener('click', flipCard);
 document.querySelector('.expand').addEventListener('click', function (e) {
 
     let card = document.querySelector('.card');
